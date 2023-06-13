@@ -1,0 +1,139 @@
+dn: ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Hospitales
+
+dn: ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Magdalena
+
+dn: ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Departamentos
+
+dn: ou=depDireccion,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: depDireccion
+
+dn: ou=depMedicinaGeneral,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: depMedicinaGeneral
+
+dn: ou=depMedicinaRehabilitadora,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: depMedicinaRehabilitadora
+
+dn: ou=depFisioterapia,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: depFisioterapia
+
+dn: ou=Grupos,ou=depFisioterapia,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Grupos
+
+dn: ou=Grupos,ou=depMedicinaGeneral,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Grupos
+
+dn: ou=Grupos,ou=depMedicinaRehabilitadora,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Grupos
+
+dn: ou=Grupos,ou=depDireccion,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Grupos
+
+dn: ou=Usuarios,ou=depFisioterapia,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=Usuarios,ou=depMedicinaGeneral,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=Usuarios,ou=depMedicinaRehabilitadora,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=Usuarios,ou=depDireccion,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: cn=GGDireccion,ou=Grupos,ou=depDireccion,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: posixGroup
+cn: GGDireccion
+gidNumber: 20000
+
+dn: cn=GGMedicinaGeneral,ou=Grupos,ou=depMedicinaGeneral,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: posixGroup
+cn: GGMedicinaGeneral
+gidNumber: 20001
+
+dn: cn=GGMedicinaRehabilitadora,ou=Grupos,ou=depMedicinaRehabilitadora,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: posixGroup
+cn: GGMedicinaRehabilitadora
+gidNumber: 20002
+
+dn: cn=GGFisioterapia,ou=Grupos,ou=depFisioterapia,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: posixGroup
+cn: GGFisioterapia
+gidNumber: 20003
+
+dn: uid=ANTONIO,ou=Usuarios,ou=depDireccion,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: ANTONIO
+sn: Direccion
+givenName: ANTONIO
+cn: ANTONIO Direccion
+displayName: ANTONIO Direccion
+uidNumber: 20100
+gidNumber: 20000
+userPassword: {SSHA}b4C1ioQEMYsvJJbb8t7GXs4URdx2beXC
+loginShell: /bin/bash
+homeDirectory: /home/ANTONIO
+
+dn: uid=CLAUDIO,ou=Usuarios,ou=depMedicinaGeneral,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: CLAUDIO
+sn: MedicinaGeneral
+givenName: CLAUDIO
+cn: CLAUDIO MedicinaGeneral
+displayName: CLAUDIO MedicinaGeneral
+uidNumber: 20101
+gidNumber: 20001
+userPassword: {SSHA}b4C1ioQEMYsvJJbb8t7GXs4URdx2beXC
+loginShell: /bin/bash
+homeDirectory: /home/CLAUDIO
+
+dn: uid=SUSANA,ou=Usuarios,ou=depMedicinaRehabilitadora,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: SUSANA
+sn: MedicinaRehabilitadora
+givenName: SUSANA
+cn: SUSANA MedicinaRehabilitadora
+displayName: SUSANA MedicinaRehabilitadora
+uidNumber: 20102
+gidNumber: 20002
+userPassword: {SSHA}b4C1ioQEMYsvJJbb8t7GXs4URdx2beXC
+loginShell: /bin/bash
+homeDirectory: /home/SUSANA
+
+dn: uid=PEDRO,ou=Usuarios,ou=depFisioterapia,ou=Departamentos,ou=Magdalena,ou=Hospitales,dc=san,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: PEDRO
+sn: Fisioterapia
+givenName: PEDRO
+cn: SUSANA Fisioterapia
+displayName: PEDRO Fisioterapia
+uidNumber: 20103
+gidNumber: 20003
+userPassword: {SSHA}b4C1ioQEMYsvJJbb8t7GXs4URdx2beXC
+loginShell: /bin/bash
+homeDirectory: /home/PEDRO
